@@ -2,10 +2,9 @@ package com.lewd.user.service.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "micro_users")
@@ -25,6 +24,9 @@ public class User {
     private String email;
     @Column(name = "ABOUT")
     private String about;
+
+    @Transient
+    private List<Rating> rating = new ArrayList<>();
 
 
 }
