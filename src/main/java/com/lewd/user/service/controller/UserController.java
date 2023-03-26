@@ -2,6 +2,7 @@ package com.lewd.user.service.controller;
 
 import com.lewd.user.service.entity.User;
 import com.lewd.user.service.services.UserService;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
